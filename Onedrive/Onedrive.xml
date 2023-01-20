@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Onedrive</Name>
+  <Repository>driveone/onedrive:latest</Repository>
+  <Registry>https://hub.docker.com/r/driveone/onedrive</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/133978-support-bversluis-onedrive</Support>
+  <Project>https://github.com/abraunegg/onedrive/blob/master/docs/Docker.md</Project>
+  <Overview>&amp;lt;p&amp;gt;A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.&amp;lt;/p&amp;gt;&#xD;
+&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Installation:&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&#xD;
+&amp;lt;ol&amp;gt;&#xD;
+&amp;lt;li&amp;gt;Before creating the Onedrive docker&amp;amp;nbsp;container, make sure you created a configuration and data folder first (see template).&amp;amp;nbsp;&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;li&amp;gt;Create the Onedrive docker&amp;amp;nbsp;container using the template.&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;li&amp;gt;Stop the container and find the container ID. (In the right upper corner of the docker page, switch over from &amp;amp;lsquo;Basic view&amp;amp;rsquo; to &amp;amp;lsquo;Advanced view&amp;amp;rsquo;. Now you can see the Container ID for your newly made container (for example 72409c107bd0). Copy this number.)&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;li&amp;gt;Open the Unraid terminal and type: docker start your_container_ID --interactive (use right mouse --&amp;amp;gt; paste to paste your container ID in the terminal&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;li&amp;gt;After entering the command and pressing enter, the container starts in an interactive mode and a link to Microsoft is shown in the terminal. You open this link by clicking on it and log in with the Microsoft credentials of the Onedrive account you want to add. If successful, a blank page is shown. Copy the full address of this page and past it (right mouse and paste) in the terminal as the response URL and press enter. If the link is accepted, the client immediately starts downloading your files.&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;li&amp;gt;You can close the terminal, restart the container and everything should be working from now on.&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;li&amp;gt;For every Onedrive account you want to sync with Unraid, you need to create a new docker container with a different folder for the configuration and data files.&amp;lt;/li&amp;gt;&#xD;
+&amp;lt;/ol&amp;gt;</Overview>
+  <Category>Cloud:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://en.wikipedia.org/wiki/OneDrive#/media/File:Microsoft_Office_OneDrive_(2019%E2%80%93present).svg</Icon>
+  <ExtraParams>-it</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1674070961</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires> </Requires>
+  <Config Name="Configuration" Target="/onedrive/conf/" Default="" Mode="rw" Description="Location of the container configuration folder. Create this folder before start the container for the first time! For example: /mnt/user/appdata/onedrive When syncing multiple accounts, for each account a separate docker install is needed with a (sub)folder for the configuration files, for example: /mnt/user/appdata/onedrive/userA" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/onedrive/data" Default="" Mode="rw" Description="Location of the container data folder, where your onedrive files are stored. Create this folder before start the container for the first time! For example: /mnt/user/onedrive When syncing multiple accounts, for each account a docker install is needed with a (sub)folder for the data files, for example: /mnt/user/onedrive/userA" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="UID" Target="ONEDRIVE_UID" Default="999" Mode="" Description="In the Unraid WebUI open the terminal and type &#x2018;id username&#x2019; for every user with an onedrive account you want to install an Onedrive container for and write down the UID and GID for these users. " Type="Variable" Display="always" Required="true" Mask="false">999</Config>
+  <Config Name="GID" Target="ONEDRIVE_GID" Default="99" Mode="" Description="In the Unraid WebUI open the terminal and type &#x2018;id username&#x2019; for every user with an onedrive account you want to install an Onedrive container for and write down the UID and GID for these users. " Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+</Container>
