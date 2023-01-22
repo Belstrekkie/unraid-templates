@@ -7,19 +7,18 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>Invoegen</Support>
+  <Support>https://forums.unraid.net/topic/133978-support-bversluis-onedrive/</Support>
   <Project>https://github.com/abraunegg/onedrive/blob/master/docs/Docker.md</Project>
   <Overview>A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.&#xD;
 &#xD;
 Installation:&#xD;
-- Before creating the Onedrive docker&amp;amp;nbsp;container, make sure you created a configuration and data folder first (see template).&amp;amp;nbsp;&#xD;
-- Create the Onedrive docker&amp;amp;nbsp;container using the template.&#xD;
-- Stop the container and find the container ID. (In the right upper corner of the docker page, switch over from &amp;amp;lsquo;Basic view&amp;amp;rsquo; to &amp;amp;lsquo;Advanced view&amp;amp;rsquo;. Now you can see the Container ID for your newly made container (for example 72409c107bd0). Copy this number.)&#xD;
-- Open the Unraid terminal and type: docker start your_container_ID --interactive (use right mouse --&amp;amp;gt; paste to paste your container ID in the terminal&#xD;
-- After entering the command and pressing enter, the container starts in an interactive mode and a link to Microsoft is shown in the terminal. You open this link by clicking on it and log in with the Microsoft credentials of the Onedrive account you want to add. If successful, a blank page is shown. Copy the full address of this page and past it (right mouse and paste) in the terminal as the response URL and press enter. If the link is accepted, the client immediately starts downloading your files.&#xD;
-- You can close the terminal, restart the container and everything should be working from now on.&#xD;
-- For every Onedrive account you want to sync with Unraid, you need to create a new docker container with a different folder for the configuration and data files.&#xD;
-</Overview>
+- Before creating the Onedrive docker container, make sure you created a configuration and data folder first (see template). &#xD;
+- Install the Onedrive docker container using the template.&#xD;
+- Once installed, stop the docker container and find the container ID. (In the right upper corner of the docker page, switch over from &#x2018;Basic view&#x2019; to &#x2018;Advanced view&#x2019;. Now you can see the Container ID for your newly created container (for example 72409c107bd0). Copy this ID.)&#xD;
+- Open the Unraid terminal and type: docker start your_container_ID --interactive (use right mouse --&amp;gt; paste to paste your container ID in the terminal).&#xD;
+- After entering the command and pressing enter, the container starts in interactive mode and a link to a Microsoft login page is shown in the terminal. You can open this link by clicking on it and log in with the Microsoft credentials of the Onedrive account you want to add. If successful, a blank page is shown. Copy the full address of this page and past it (right mouse and paste) in the terminal as the response URL and press enter. If the link is accepted, the client immediately starts downloading your files.&#xD;
+- You can close the terminal, restart the container normally and everything should be working from now on.&#xD;
+- For every Onedrive account you want to sync with Unraid, you need to create a new docker container with a different folder for the configuration and data files.</Overview>
   <Category>Cloud:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -27,7 +26,7 @@ Installation:&#xD;
   <ExtraParams>-it</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1674404988</DateInstalled>
+  <DateInstalled>1674419686</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires> </Requires>
