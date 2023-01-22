@@ -7,27 +7,27 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/133978-support-bversluis-onedrive</Support>
+  <Support>Invoegen</Support>
   <Project>https://github.com/abraunegg/onedrive/blob/master/docs/Docker.md</Project>
-  <Overview>&amp;lt;p&amp;gt;A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Installation:&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;ol&amp;gt;&#xD;
-&amp;lt;li&amp;gt;Before creating the Onedrive docker&amp;amp;nbsp;container, make sure you created a configuration and data folder first (see template).&amp;amp;nbsp;&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;li&amp;gt;Create the Onedrive docker&amp;amp;nbsp;container using the template.&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;li&amp;gt;Stop the container and find the container ID. (In the right upper corner of the docker page, switch over from &amp;amp;lsquo;Basic view&amp;amp;rsquo; to &amp;amp;lsquo;Advanced view&amp;amp;rsquo;. Now you can see the Container ID for your newly made container (for example 72409c107bd0). Copy this number.)&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;li&amp;gt;Open the Unraid terminal and type: docker start your_container_ID --interactive (use right mouse --&amp;amp;gt; paste to paste your container ID in the terminal&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;li&amp;gt;After entering the command and pressing enter, the container starts in an interactive mode and a link to Microsoft is shown in the terminal. You open this link by clicking on it and log in with the Microsoft credentials of the Onedrive account you want to add. If successful, a blank page is shown. Copy the full address of this page and past it (right mouse and paste) in the terminal as the response URL and press enter. If the link is accepted, the client immediately starts downloading your files.&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;li&amp;gt;You can close the terminal, restart the container and everything should be working from now on.&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;li&amp;gt;For every Onedrive account you want to sync with Unraid, you need to create a new docker container with a different folder for the configuration and data files.&amp;lt;/li&amp;gt;&#xD;
-&amp;lt;/ol&amp;gt;</Overview>
+  <Overview>A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.&#xD;
+&#xD;
+Installation:&#xD;
+- Before creating the Onedrive docker&amp;amp;nbsp;container, make sure you created a configuration and data folder first (see template).&amp;amp;nbsp;&#xD;
+- Create the Onedrive docker&amp;amp;nbsp;container using the template.&#xD;
+- Stop the container and find the container ID. (In the right upper corner of the docker page, switch over from &amp;amp;lsquo;Basic view&amp;amp;rsquo; to &amp;amp;lsquo;Advanced view&amp;amp;rsquo;. Now you can see the Container ID for your newly made container (for example 72409c107bd0). Copy this number.)&#xD;
+- Open the Unraid terminal and type: docker start your_container_ID --interactive (use right mouse --&amp;amp;gt; paste to paste your container ID in the terminal&#xD;
+- After entering the command and pressing enter, the container starts in an interactive mode and a link to Microsoft is shown in the terminal. You open this link by clicking on it and log in with the Microsoft credentials of the Onedrive account you want to add. If successful, a blank page is shown. Copy the full address of this page and past it (right mouse and paste) in the terminal as the response URL and press enter. If the link is accepted, the client immediately starts downloading your files.&#xD;
+- You can close the terminal, restart the container and everything should be working from now on.&#xD;
+- For every Onedrive account you want to sync with Unraid, you need to create a new docker container with a different folder for the configuration and data files.&#xD;
+</Overview>
   <Category>Cloud:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://en.wikipedia.org/wiki/OneDrive#/media/File:Microsoft_Office_OneDrive_(2019%E2%80%93present).svg</Icon>
+  <Icon>https://user-images.githubusercontent.com/29630035/64020891-0342f080-cb33-11e9-8a86-7a4baffcdf6d.png</Icon>
   <ExtraParams>-it</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1674070961</DateInstalled>
+  <DateInstalled>1674404988</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires> </Requires>
